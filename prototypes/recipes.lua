@@ -280,7 +280,8 @@ data:extend({
     results =
     {
       {type = "fluid", name = "chemical-mud", amount = 80},
-      {type = "item", name = "treated-sand", amount = 20}
+      {type = "fluid", name = "spiced-sand", amount = 10, probability = 0.01},
+      {type = "item", name = "treated-sand", amount = 20},
     },
     main_product = "treated-sand",
     allow_productivity = true,

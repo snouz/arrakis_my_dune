@@ -53,7 +53,7 @@ data:extend({
     stack_size = 20,
   },
 
--- Item declaration for Ornithoper
+-- Item declaration for Ornithopter
 
   {
     type = "item-with-entity-data",

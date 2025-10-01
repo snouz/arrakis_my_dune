@@ -8,8 +8,9 @@ planet_map_gen.arrakis = function()
       temperature = "vulcanus_temperature",
       moisture = "fulgora_moisture",
       aux = "fulgora_aux",
-      cliffiness = "fulgora_cliffiness",
-      cliff_elevation = "arrakis_cliff_elevation",
+      elevation      = "arrakis_elevation",
+      cliffiness     = "cliffiness_basic",
+      cliff_elevation= "cliff_elevation_from_elevation",
       ["entity:crude-black-acid:probability"] = "arrakis_crude_black_acid_probability", --AutoplaceControl:probability = Noise expression proba
       ["entity:crude-black-acid:richness"] = "arrakis_crude_black_acid_richness",
       ["entity:petroleum_gas_geyser:probability"] = "arrakis_petroleum_gas_geyser_probability",
@@ -17,14 +18,14 @@ planet_map_gen.arrakis = function()
     },
     cliff_settings =
     {
-      name = "cliff", 
-      control = "fulgora_cliff",
-      cliff_elevation_0 = 80,
-      cliff_elevation_interval = 40,
+      name = "cliff",
+      cliff_elevation_0 = 30,
+      cliff_elevation_interval = 10,
       cliff_smoothing = 0, -- This is critical for correct cliff placement on the coast.
-      richness = 0.95
+      richness = 0.85
     },
     ------------------------------------------------------------------------------------------------------------------------------
+
     autoplace_controls =
     {
       ["crude_black_acid"] = {},

@@ -124,7 +124,12 @@ data:extend({
 
   
 
-
+  {
+  type = "noise-expression",
+  name = "arrakis_elevation",
+  -- intended_property = "elevation", -- optionnel
+  expression = "arrakis_pre_elevation + ((arrakis_rocky_basins < 0) - 0.5) * arrakis_coastline_drop"
+  },
   {
   type = "noise-expression",
   name = "arrakis_coastline",
@@ -153,7 +158,7 @@ data:extend({
 
   {
   type = "noise-expression",
-  name = "arrakis_rocky_mask", --Precalcul
+  name = "arrakis_rocky_mask", --Premask of big island * small island of Rocky tiles
   expression =
     "(arrakis_desert_mask > arrakis_deep_desert_mask + 0.1) * 3 * arrakis_voronoi2"
   },
@@ -179,7 +184,7 @@ data:extend({
   },
   {
   type = "noise-expression", 
-  name = "arrakis_deep_desert_mask", --Precalculs
+  name = "arrakis_deep_desert_mask", --Premask of deep desert
   expression = "1 - arrakis_desert_mask"
   },
   {
